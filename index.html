@@ -1,0 +1,925 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Product Strategy for the Top Google Search Advertising Verticals</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #5b6773;
+      --line: #d9e0e7;
+      --soft: #f5f7fa;
+      --accent: #2457c5;
+      --accent-soft: #eaf0ff;
+      --warn: #75540d;
+      --warn-soft: #fff6d6;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.48;
+    }
+    main {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 32px 72px;
+    }
+    h1 {
+      font-size: 30px;
+      line-height: 1.15;
+      margin: 0 0 8px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      color: var(--muted);
+      margin: 0 0 28px;
+      font-size: 15px;
+    }
+    h2 {
+      font-size: 22px;
+      margin: 34px 0 12px;
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+      letter-spacing: 0;
+    }
+    h3 {
+      font-size: 17px;
+      margin: 24px 0 8px;
+      letter-spacing: 0;
+    }
+    h4 {
+      font-size: 14px;
+      margin: 18px 0 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--muted);
+    }
+    p { margin: 8px 0 12px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul, ol { margin: 8px 0 14px 22px; padding: 0; }
+    li { margin: 5px 0; }
+    .callout {
+      background: var(--accent-soft);
+      border: 1px solid #cddcff;
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin: 18px 0;
+    }
+    .warning {
+      background: var(--warn-soft);
+      border: 1px solid #ead58b;
+      color: var(--warn);
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin: 16px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0 18px;
+      font-size: 13px;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 9px 10px;
+      vertical-align: top;
+    }
+    th {
+      text-align: left;
+      background: var(--soft);
+      font-weight: 700;
+    }
+    td.num { text-align: right; white-space: nowrap; }
+    .section-label {
+      display: inline-block;
+      font-size: 12px;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border: 1px solid #cddcff;
+      border-radius: 999px;
+      padding: 2px 8px;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .rating {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1;
+      border-radius: 999px;
+      padding: 4px 7px;
+      margin: 0 0 5px;
+      white-space: nowrap;
+    }
+    .rating.high {
+      color: #164424;
+      background: #e2f4e8;
+      border: 1px solid #b8ddc5;
+    }
+    .rating.medium {
+      color: #6a4a00;
+      background: #fff1c2;
+      border: 1px solid #ead07a;
+    }
+    .rating.low {
+      color: #4d5965;
+      background: #eef1f4;
+      border: 1px solid #d4dbe3;
+    }
+    .rating.very-high {
+      color: #083b77;
+      background: #e3f0ff;
+      border: 1px solid #b8d6ff;
+    }
+    .cell-note {
+      display: block;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 12px 0 18px;
+    }
+    .box {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 14px;
+      background: #fff;
+    }
+    .box h4 { margin-top: 0; }
+    .source-list li {
+      overflow-wrap: anywhere;
+    }
+    @media (max-width: 760px) {
+      main { padding: 28px 18px 56px; }
+      .grid { grid-template-columns: 1fr; }
+      table { font-size: 12px; display: block; overflow-x: auto; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>AI Product Strategy for the Top Google Search Advertising Verticals</h1>
+  <p class="subtitle">Master strategy doc. Prepared June 6, 2026. Scope: top U.S. Internet Search advertising verticals by the MediaRadar-Vivvix/OAAA 2024 spend proxy, with product plans for ChatGPT/OpenAI.</p>
+
+  <section>
+    <h2>Executive Summary</h2>
+    <ul>
+      <li><strong>Retail is the obvious first vertical, but the broader opportunity is not just shopping.</strong> Re-sorting the OAAA/MediaRadar-Vivvix table by the <em>Internet Search Spend</em> column produces this top five: Retail, Insurance & Real Estate, Media & Advertising, Financial, and Local Services & Amusements. Retail alone represented about $16.3B of Internet Search spend in 2024.</li>
+      <li><strong>The common pattern is high-intent decisioning.</strong> These verticals buy search because users arrive with expensive intent: buy a product, compare insurance, choose a home, pick a financial product, choose a movie/show/subscription, hire a local pro, or book an experience. AI can compress that path from query to decision to transaction or qualified lead.</li>
+      <li><strong>The consumer-AI lens changes the read.</strong> Search spend identifies monetizable demand, but consumer AI companies usually break out through frequency, personal context, shareable output, emotional utility, or end-to-end task completion. That strengthens Retail and Local Services, makes regulated finance/housing more partner-led, and creates a separate high-traction creative/entertainment opportunity that is adjacent to, but not the same as, the Media & Advertising search-spend vertical.</li>
+      <li><strong>OpenAI's strongest wedge is a trusted decision layer, not a copy of Google's auction.</strong> Google owns query distribution, advertiser tooling, Shopping Graph, Maps, and Local Services. Amazon, Zillow, banks, insurers, Yelp, and ad platforms own vertical data. OpenAI can win when it uses reasoning, memory, multimodal input, partner apps, and human-in-the-loop execution to make complex decisions feel safer and easier.</li>
+      <li><strong>The highest-risk verticals require strict separation between advice, ranking, and monetization.</strong> Insurance, real estate, financial services, housing, and local services all have licensing, discrimination, consumer-protection, and lead-quality constraints. Hidden paid ranking would damage the core trust moat. Transaction, referral, SaaS, and partner revenue are safer than unlabeled answer ads.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Top Five Search-Spend Verticals</h2>
+    <p><strong>Basis:</strong> The OAAA/MediaRadar-Vivvix PDF ranks rows by total category ad spend. For this strategy question, the table below re-sorts the same rows by the <em>Internet Search Spend</em> column, which is the closest public proxy for Google Search advertising concentration. It is not a Google-only disclosure, and it does not reveal individual advertiser spend.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Search-spend rank</th>
+          <th>Product industry</th>
+          <th>Total category ad spend</th>
+          <th>Total digital desktop/mobile spend</th>
+          <th>Internet Search spend</th>
+          <th>Strategic interpretation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="num">1</td>
+          <td>Retail</td>
+          <td class="num">$28.75B</td>
+          <td class="num">$22.77B</td>
+          <td class="num">$16.28B</td>
+          <td>Search captures bottom-funnel product discovery, price comparison, deal intent, and category research.</td>
+        </tr>
+        <tr>
+          <td class="num">2</td>
+          <td>Insurance & Real Estate</td>
+          <td class="num">$13.68B</td>
+          <td class="num">$8.35B</td>
+          <td class="num">$6.20B</td>
+          <td>High LTV leads and high-stakes life events make quote, agent, policy, mortgage, and home-search intent valuable.</td>
+        </tr>
+        <tr>
+          <td class="num">3</td>
+          <td>Media & Advertising</td>
+          <td class="num">$13.97B</td>
+          <td class="num">$9.75B</td>
+          <td class="num">$5.01B</td>
+          <td>Media and entertainment companies buy demand for movies, streaming, subscriptions, tickets, news, sports, reviews, and where-to-watch queries.</td>
+        </tr>
+        <tr>
+          <td class="num">4</td>
+          <td>Financial</td>
+          <td class="num">$12.19B</td>
+          <td class="num">$8.04B</td>
+          <td class="num">$4.84B</td>
+          <td>Search monetizes credit cards, banking, loans, investing, refinancing, debt help, tax, and wealth-management comparison.</td>
+        </tr>
+        <tr>
+          <td class="num">5</td>
+          <td>Local Services & Amusements</td>
+          <td class="num">$18.71B</td>
+          <td class="num">$9.09B</td>
+          <td class="num">$4.65B</td>
+          <td>Search converts urgent local need into calls, messages, bookings, quotes, ticket purchases, and appointments.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Primary source: <a href="https://oaaa.org/wp-content/uploads/2025/04/2024-Total-Media-Spend-by-Product-Industry-by-Channel.pdf">OAAA / MediaRadar-Vivvix 2024 Product Industries Media Spend by Channel</a>. Market context: <a href="https://www.iab.com/insights/internet-advertising-revenue-report-full-year-2025/">IAB/PwC 2025 Internet Advertising Revenue Report</a> and <a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm">Alphabet 2025 Form 10-K</a>.</p>
+  </section>
+
+  <section>
+    <h2>Portfolio Strategy Across The Five Verticals</h2>
+    <div class="callout">
+      <strong>Recommended portfolio shape:</strong> Build a shared ChatGPT decision-and-action platform, then specialize it by vertical. The reusable primitives are user memory, source-backed research, structured comparison, partner app/action surfaces, identity/payment/consent, audit logs, and human confirmation before regulated or monetary actions.
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Vertical</th>
+          <th>OpenAI wedge</th>
+          <th>Why it can win</th>
+          <th>Primary monetization</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Retail / Shopping</td>
+          <td>Trusted cross-merchant shopping advisor</td>
+          <td>High-consideration decisions need reasoning, memory, review synthesis, and neutral ranking.</td>
+          <td>Opt-in transaction/referral fees, merchant tooling, premium shopping memory and price-watch features.</td>
+        </tr>
+        <tr>
+          <td>Insurance & Real Estate</td>
+          <td>Life-event decision concierge</td>
+          <td>Users need help parsing documents, tradeoffs, affordability, policy fit, and agent/carrier selection.</td>
+          <td>Qualified lead fees with strict disclosures, enterprise workflow tools, premium consumer document support.</td>
+        </tr>
+        <tr>
+          <td>Media & Advertising / Entertainment</td>
+          <td>Entertainment and media decision companion</td>
+          <td>Consumers need help choosing movies, shows, subscriptions, news, sports, and live events across fragmented catalogs and reviews.</td>
+          <td>Subscription/affiliate/ticketing referral, studio/publisher promotional tools, premium family/media planning features.</td>
+        </tr>
+        <tr>
+          <td>Financial</td>
+          <td>Personal finance decision and document copilot</td>
+          <td>Consumers and advisors need scenario modeling, document explanation, product comparison, and compliant handoff.</td>
+          <td>Subscription, regulated partner referrals, enterprise advisory/copilot licensing.</td>
+        </tr>
+        <tr>
+          <td>Local Services & Amusements</td>
+          <td>Local action concierge</td>
+          <td>Phone calls, quotes, scheduling, trust checks, and review synthesis are manual and fragmented.</td>
+          <td>Pay-per-qualified-intro, booking fees, SMB SaaS, premium user concierge.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <span class="section-label">Vertical 1</span>
+    <h2>Retail / Shopping: Build The Trusted Shopping Decision Engine</h2>
+    <h3>Why Search Spend Is High</h3>
+    <p>Retail search spend is large because shopping queries are close to purchase. Users search for products, alternatives, reviews, prices, local inventory, gifts, bundles, and deals. Google is responding with AI Mode shopping, agentic checkout, Universal Cart, Shopping Graph, UCP, and AP2; Amazon is defending its closed marketplace with Rufus/Alexa for Shopping and buy/auto-buy flows; Walmart is partnering with OpenAI while emphasizing its own AI-first retail experience.</p>
+    <p>Useful factual anchors: OpenAI has launched Shopping Research and Instant Checkout/ACP, Google reports a Shopping Graph with tens of billions of listings and agentic checkout, Amazon says its Rufus/Alexa shopping assistant materially increases purchase likelihood, and Walmart announced shopping in ChatGPT with Instant Checkout.</p>
+
+    <div class="grid">
+      <div class="box">
+        <h4>User Jobs</h4>
+        <ul>
+          <li>Find the right product from vague constraints.</li>
+          <li>Compare specs, reviews, total landed cost, and return risk.</li>
+          <li>Build carts from goals: meal plan, party, nursery, trip, gift list.</li>
+          <li>Track price drops and reorder recurring items.</li>
+          <li>Handle post-purchase questions, returns, warranties, and receipts.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h4>OpenAI Position</h4>
+        <ul>
+          <li><strong>Advantages:</strong> neutral reasoning, memory, multimodal input, Apps SDK, ACP, existing commerce partners.</li>
+          <li><strong>Disadvantages:</strong> weaker product graph than Google, weaker fulfillment stack than Amazon/Walmart, trust risk if ranking is monetized poorly.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Product Plan</h3>
+    <p><strong>Wedge:</strong> "Tell me what to buy, prove it, and help me buy it safely." Start with high-consideration categories where product grids and sponsored results are noisy: electronics, home/kitchen, baby/kids gear, beauty, apparel fit, outdoor/sports, and gifts.</p>
+    <ul>
+      <li><strong>Core flows:</strong> constraint interview, source-backed shortlist, review-quality synthesis, comparison table, total cost and return-policy check, partner checkout or merchant handoff, post-purchase support.</li>
+      <li><strong>Integrations:</strong> ACP/direct merchant feeds, Shopify/Stripe/PayPal commerce rails, retailer apps in ChatGPT, public web retrieval, email receipts, price trackers.</li>
+      <li><strong>Ranking policy:</strong> organic results ranked by user fit, review reliability, availability, total landed cost, return friction, and merchant reputation. Sponsored alternatives must be labeled and cannot replace the organic top picks.</li>
+      <li><strong>KPIs:</strong> decision-to-checkout conversion, post-purchase satisfaction, return rate, incorrect-item incidents, time-to-decision, repeat shopping memory usage, merchant coverage.</li>
+      <li><strong>12-month roadmap:</strong> Months 0-3: best-in-class comparison and citations. Months 3-6: price tracking, gifting, replenishment, partner checkout. Months 6-9: multi-item cart builder, grocery, receipts/returns. Months 9-12: merchant analytics and clearly labeled sponsored alternatives.</li>
+    </ul>
+    <p><strong>Defensibility:</strong> personalized shopping memory and trust. Product graph access will become more commoditized through protocols; knowing the user's household, sizing, constraints, budget, and taste is harder to copy.</p>
+    <p>Key sources: <a href="https://openai.com/index/chatgpt-shopping-research/">OpenAI Shopping Research</a>, <a href="https://openai.com/index/buy-it-in-chatgpt/">OpenAI Instant Checkout and ACP</a>, <a href="https://blog.google/products-and-platforms/products/shopping/agentic-checkout-holiday-ai-shopping/">Google agentic checkout</a>, <a href="https://blog.google/products/ads-commerce/agentic-commerce-ai-tools-protocol-retailers-platforms/">Google UCP</a>, <a href="https://www.aboutamazon.com/news/retail/amazon-rufus-ai-assistant-personalized-shopping-features">Amazon Rufus/Alexa for Shopping</a>, <a href="https://corporate.walmart.com/news/2025/10/14/walmart-partners-with-openai-to-create-ai-first-shopping-experiences">Walmart and OpenAI</a>, <a href="https://www.perplexity.ai/es-es/hub/blog/shop-like-a-pro">Perplexity Shopping</a>.</p>
+  </section>
+
+  <section>
+    <span class="section-label">Vertical 2</span>
+    <h2>Insurance & Real Estate: Own The Life-Event Decision Layer</h2>
+    <h3>Why Search Spend Is High</h3>
+    <p>This combined category is search-heavy because both sides monetize infrequent, high-value life events. Search queries such as "best car insurance," "homeowners insurance quote," "life insurance calculator," "homes for sale near me," "mortgage refinance," "realtor near me," and "sell my house fast" can produce leads worth far more than the click. The user has high anxiety, low frequency, and high information asymmetry, which makes advice, comparison, and trust central.</p>
+
+    <h3>AI Competitive Landscape</h3>
+    <ul>
+      <li><strong>Real estate portals are moving fast.</strong> Zillow launched a ChatGPT plugin, later a Zillow app in ChatGPT, and has emphasized natural-language search and vertical AI advantage. Redfin launched Ask Redfin and nationwide AI Q&A for listings; Realtor.com launched AI-powered natural-language home search.</li>
+      <li><strong>Insurance is already AI-operational.</strong> Lemonade uses AI for onboarding and claims; Insurify launched a ChatGPT app for car-insurance comparison; Jerry and other marketplaces compete around quote comparison and switching.</li>
+      <li><strong>Regulators are directly relevant.</strong> HUD has issued Fair Housing Act AI/algorithmic advertising guidance; NAIC has an AI model bulletin for insurers; CFPB guidance covers adverse-action explanations in AI-assisted credit decisions.</li>
+    </ul>
+
+    <div class="grid">
+      <div class="box">
+        <h4>User Jobs</h4>
+        <ul>
+          <li>Understand what coverage is needed and what exclusions matter.</li>
+          <li>Compare policies, deductibles, premiums, claims reputation, and carrier stability.</li>
+          <li>Parse policy PDFs, inspection reports, disclosures, HOA docs, and loan estimates.</li>
+          <li>Search homes by natural needs, commute, schools, renovation risk, and affordability.</li>
+          <li>Connect to licensed agents, brokers, carriers, lenders, and inspectors at the right moment.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h4>OpenAI Position</h4>
+        <ul>
+          <li><strong>Advantages:</strong> document understanding, scenario reasoning, personal context, multi-step planning, partner app surface.</li>
+          <li><strong>Disadvantages:</strong> no native MLS, carrier, underwriting, claims, or licensing network; high regulatory and liability exposure.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Product Plan</h3>
+    <p><strong>Wedge:</strong> a "Life Event Advisor" for moving, buying a home, refinancing, and insuring major assets. The product should not start as an agent replacement. It should start as a document-and-decision copilot that prepares users to work with licensed professionals.</p>
+    <ul>
+      <li><strong>Core flows:</strong> policy/document upload, risk questionnaire, quote-comparison checklist, coverage gap explanation, home-search brief, affordability model, inspection/disclosure summarizer, agent/carrier/lender handoff.</li>
+      <li><strong>Integrations:</strong> Zillow/Redfin/Realtor.com style apps, public records, mortgage calculators, insurance marketplaces, carrier APIs, DocAI/OCR, email/Drive document import, licensed partner networks.</li>
+      <li><strong>Ranking and trust:</strong> no protected-class targeting, no steering by hidden compensation, clear "not legal/insurance/financial advice" boundaries, licensed handoff for binding decisions, audit logs for recommendations and lead routing.</li>
+      <li><strong>Monetization:</strong> qualified referral fees, premium consumer document support, enterprise workflow licensing for brokerages/carriers/lenders, not answer ads.</li>
+      <li><strong>KPIs:</strong> completed comparison briefs, licensed handoff rate, quote completion, user comprehension, complaint rate, lead acceptance quality, policy/home-fit satisfaction after 30-90 days.</li>
+      <li><strong>12-month roadmap:</strong> Months 0-3: insurance and real-estate document explainers. Months 3-6: quote/home comparison workflows and partner app integrations. Months 6-9: licensed handoff and compliance review console. Months 9-12: end-to-end move/home/coverage planning.</li>
+    </ul>
+    <p><strong>Defensibility:</strong> longitudinal life-event memory: household, assets, commute, risk tolerance, budget, school needs, coverage history, and prior documents.</p>
+    <p>Key sources: <a href="https://www.zillowgroup.com/news/zillow-becomes-first-real-estate-app-in-chatgpt/">Zillow app in ChatGPT</a>, <a href="https://zillow.mediaroom.com/2023-05-02-Zillow-builds-ChatGPT-plugin-for-real-estate-searches">Zillow ChatGPT plugin</a>, <a href="https://investors.zillowgroup.com/investors/news-and-events/news/news-details/2026/Zillows-Structural-AI-Advantage---Our-Thoughts-2026-V-Blqi8WAt/default.aspx">Zillow AI advantage note</a>, <a href="https://www.redfin.com/news/ask-redfin-launches-nationwide/">Ask Redfin</a>, <a href="https://www.prnewswire.com/news-releases/search-it-how-you-say-it-realtorcom-launches-new-ai-powered-search-302578902.html">Realtor.com AI search</a>, <a href="https://insurify.com/press/news/insurify-chatgpt-app/">Insurify ChatGPT app</a>, <a href="https://www.lemonade.com/claims">Lemonade claims AI</a>, <a href="https://content.naic.org/sites/default/files/2023-12-4%252520Model%252520Bulletin_Adopted_0.pdf">NAIC AI Model Bulletin</a>, <a href="https://archives.hud.gov/news/2024/pr24-098.cfm">HUD Fair Housing AI guidance</a>, <a href="https://www.consumerfinance.gov/about-us/newsroom/cfpb-issues-guidance-on-credit-denials-by-lenders-using-artificial-intelligence/">CFPB AI credit-denial guidance</a>.</p>
+  </section>
+
+  <section>
+    <span class="section-label">Vertical 3</span>
+    <h2>Media & Advertising / Entertainment: Build A Media Decision Companion</h2>
+    <h3>Why Search Spend Is High</h3>
+    <p>The OAAA/MediaRadar row should be read primarily as media, entertainment, publishing, streaming, film, TV, and related advertising/promotion, not as a pure "ad-tech tools" or "AI media generation" vertical. MediaRadar's own top Media & Entertainment advertiser list includes examples like Disney, Walt Disney Studios, Comcast, Disney+, NBCUniversal, The New York Times, FX, theaters, and other media owners. The monetizable search intents are therefore closer to "movie tickets," "what to watch," "streaming service deals," "sports package," "news subscription," "showtimes near me," "Broadway tickets," "reviews," and "where is this available to stream."</p>
+
+    <h3>AI Competitive Landscape</h3>
+    <ul>
+      <li><strong>Distribution incumbents are strong.</strong> Google/YouTube, Netflix, Disney, Amazon/Prime Video/IMDb, Apple, Spotify, TikTok, Roku, cable/sports bundles, Rotten Tomatoes, Letterboxd, and publisher apps all have catalog, rights, and user-history advantages.</li>
+      <li><strong>AI search and answer engines threaten publisher traffic.</strong> Perplexity and Google AI experiences are experimenting with answer-based discovery, ads, and publisher revenue models, which creates both partnership demand and trust risk.</li>
+      <li><strong>Image and video generation matter as a studio/publisher tool, not as the vertical definition.</strong> OpenAI's image advantage supports posters, key art variants, social creative, storyboards, localization, and fan assets, but the Google Search ad-spend category is mostly about media products and audience acquisition.</li>
+    </ul>
+
+    <div class="grid">
+      <div class="box">
+        <h4>User Jobs</h4>
+        <ul>
+          <li>Decide what to watch, read, attend, or subscribe to across fragmented services.</li>
+          <li>Compare ratings, reviews, family suitability, runtime, mood, spoilers, availability, and price.</li>
+          <li>Maintain watchlists, reading lists, sports/event calendars, and subscription bundles.</li>
+          <li>Find showtimes, tickets, live events, streaming availability, and local entertainment options.</li>
+          <li>Create fan summaries, recaps, explainers, social assets, posters, and personalized recommendations.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h4>OpenAI Position</h4>
+        <ul>
+          <li><strong>Advantages:</strong> conversational discovery, voice in lean-back contexts, memory of taste/family constraints, image generation for creative/fan assets, summarization and explainers.</li>
+          <li><strong>Disadvantages:</strong> no native catalog/rights graph, limited viewing-history data, strong platform incumbents, copyright/licensing sensitivity, lower lead value than finance/insurance.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Product Plan</h3>
+    <p><strong>Wedge:</strong> a "Media Concierge" that helps users choose and act: what to watch tonight, which subscriptions to keep, where a movie/show is available, which live event to attend, and what recap/context they need before watching.</p>
+    <ul>
+      <li><strong>Core flows:</strong> taste interview, family-safe recommendation, streaming-availability check, price/subscription comparison, showtime/ticket lookup, spoiler-safe recap, live-event planner, social/fan asset generation.</li>
+      <li><strong>Integrations:</strong> streaming catalogs, IMDb/Rotten Tomatoes/Letterboxd-style reviews, ticketing/showtime APIs, publisher/news subscriptions, calendars, smart TV/mobile handoff, partner apps.</li>
+      <li><strong>Ranking and trust:</strong> separate organic taste fit from paid promotion; label studio/promoted placements; respect spoilers, age ratings, copyright, and user viewing constraints.</li>
+      <li><strong>Monetization:</strong> streaming/ticket/subscription affiliate fees, premium family/media planning, studio/publisher promotional tools, and optional B2B creative asset generation. Avoid making "AI media generation" the core consumer vertical thesis.</li>
+      <li><strong>KPIs:</strong> recommendation acceptance, watch/ticket/subscription conversion, repeat recommendation use, spoiler complaints, family-suitability satisfaction, subscription savings, partner conversion.</li>
+      <li><strong>12-month roadmap:</strong> Months 0-3: recommendation and streaming-availability research. Months 3-6: watchlists, recaps, calendars, and ticketing links. Months 6-9: voice-first living-room/mobile flows and subscription optimizer. Months 9-12: partner apps and studio/publisher promotion tools.</li>
+    </ul>
+    <p><strong>Defensibility:</strong> taste and household media memory: what the user likes, who is watching, age constraints, subscriptions, sports teams, genres, languages, and tolerance for spoilers/violence/runtime.</p>
+    <p>Key sources: <a href="https://advertisers.mediaradar.com/top_media_and_entertainment_advertisers">MediaRadar Top Media & Entertainment Advertisers</a>, <a href="https://www.perplexity.ai/es/hub/blog/why-we-re-experimenting-with-advertising">Perplexity advertising experiment</a>, <a href="https://openai.com/index/introducing-4o-image-generation/">OpenAI 4o image generation</a>, <a href="https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/">OpenAI realtime voice models</a>, <a href="https://www.ftc.gov/industry/technology/artificial-intelligence">FTC artificial intelligence enforcement and guidance</a>.</p>
+  </section>
+
+  <section>
+    <span class="section-label">Vertical 4</span>
+    <h2>Financial Services: Win On Scenario Planning And Compliant Handoff</h2>
+    <h3>Why Search Spend Is High</h3>
+    <p>Financial search traffic is valuable because consumer products can carry high lifetime value and high lead value: credit cards, checking accounts, mortgages, refinancing, debt consolidation, personal loans, tax help, insurance-adjacent products, investing, and wealth management. Users search when they are choosing a product, solving a money problem, or comparing rates. That is exactly the moment when a better decision assistant can create value.</p>
+
+    <h3>AI Competitive Landscape</h3>
+    <ul>
+      <li><strong>Banks and wealth managers are deploying proprietary assistants.</strong> Bank of America's Erica surpassed 3B client interactions; Morgan Stanley uses OpenAI-powered assistants and meeting summarization across advisor teams.</li>
+      <li><strong>Fintech and payments are using OpenAI for service and commerce.</strong> Klarna's OpenAI-powered assistant handles customer-service, refunds/returns, and financial-habits support.</li>
+      <li><strong>Google Cloud is pushing financial-services agents.</strong> Google points to Gemini/Vertex AI use cases across banking, customer service, research agents, and risk workflows.</li>
+      <li><strong>Regulatory scrutiny is unusually high.</strong> CFPB has warned about banking chatbots, FINRA reminds firms that existing supervision/recordkeeping/communications rules apply to generative AI, and the SEC has enforced against "AI washing."</li>
+    </ul>
+
+    <div class="grid">
+      <div class="box">
+        <h4>User Jobs</h4>
+        <ul>
+          <li>Choose a credit card, account, loan, mortgage, or refinance option.</li>
+          <li>Understand statements, fees, disclosures, and tradeoffs.</li>
+          <li>Model debt payoff, savings, retirement, tax, and cash-flow scenarios.</li>
+          <li>Prepare for a conversation with an advisor, lender, broker, or tax professional.</li>
+          <li>Detect conflicts, hidden fees, and misleading product claims.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h4>OpenAI Position</h4>
+        <ul>
+          <li><strong>Advantages:</strong> document analysis, math/scenario modeling, memory, enterprise credibility, advisor-workflow precedent through Morgan Stanley.</li>
+          <li><strong>Disadvantages:</strong> cannot act as an unlicensed advisor; must avoid personalized regulated advice unless a licensed partner is responsible; needs high auditability.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Product Plan</h3>
+    <p><strong>Wedge:</strong> a financial decision and document copilot that helps users understand options, model scenarios, and prepare for regulated handoff without pretending to be a fiduciary.</p>
+    <ul>
+      <li><strong>Core flows:</strong> upload statements/disclosures, compare product terms, debt-payoff simulator, mortgage/refi scenario planner, budget and cash-flow explainer, advisor meeting prep, complaint/dispute drafting.</li>
+      <li><strong>Integrations:</strong> user-permissioned bank data, payroll, tax docs, brokerage statements, credit-card offers, lender APIs, Plaid-like aggregators, advisor/broker-dealer enterprise systems.</li>
+      <li><strong>Ranking and trust:</strong> product comparisons must separate eligibility, price, risk, and compensation. Regulated advice requires licensed partner review. Every recommendation should keep inputs, assumptions, and source dates visible.</li>
+      <li><strong>Monetization:</strong> premium subscription for consumers, enterprise advisor copilots, compliant referral fees where permitted, and partner APIs. Avoid hidden paid placement in financial ranking.</li>
+      <li><strong>KPIs:</strong> scenario completion, user comprehension, saved fees/interest, advisor productivity, compliance-review pass rate, complaint rate, lead quality, downstream product satisfaction.</li>
+      <li><strong>12-month roadmap:</strong> Months 0-3: calculators and document explainers. Months 3-6: user-permissioned financial data and product comparison. Months 6-9: advisor/lender/tax professional handoff. Months 9-12: enterprise compliance console and audit export.</li>
+    </ul>
+    <p><strong>Defensibility:</strong> trusted financial memory and auditable reasoning. A user may not want a bank, credit-card issuer, or brokerage to be the neutral comparator across all products.</p>
+    <p>Key sources: <a href="https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/a-decade-of-ai-innovation--bofa-s-virtual-assistant-erica-surpas.html">Bank of America Erica</a>, <a href="https://openai.com/index/morgan-stanley/">OpenAI and Morgan Stanley</a>, <a href="https://openai.com/index/klarna/">OpenAI and Klarna</a>, <a href="https://cloud.google.com/solutions/financial-services">Google Cloud financial services</a>, <a href="https://cloud.google.com/transform/new-research-shows-how-ai-agents-are-driving-value-for-financial-services">Google Cloud AI agents in financial services</a>, <a href="https://www.consumerfinance.gov/data-research/research-reports/chatbots-in-consumer-finance/">CFPB chatbots in consumer finance</a>, <a href="https://www.finra.org/rules-guidance/notices/24-09">FINRA Regulatory Notice 24-09</a>, <a href="https://www.sec.gov/newsroom/speeches-statements/sec-chair-gary-gensler-ai-washing">SEC on AI washing</a>.</p>
+  </section>
+
+  <section>
+    <span class="section-label">Vertical 5</span>
+    <h2>Local Services & Amusements: Turn "Near Me" Into A Managed Action</h2>
+    <h3>Why Search Spend Is High</h3>
+    <p>Local services search spend is driven by urgency, locality, and lead value. Queries like "plumber near me," "emergency HVAC," "divorce lawyer," "dentist appointment," "pet groomer pricing," "car repair quote," "birthday party venue," and "tickets near me" often convert to calls, messages, bookings, or quotes. Google Local Services Ads already monetize this as pay-per-lead, with Google Guarantee/Screened trust signals and bidding based on lead value.</p>
+
+    <h3>AI Competitive Landscape</h3>
+    <ul>
+      <li><strong>Google is moving from search result to action.</strong> Local Services Ads charge for valid leads, and Google has launched agentic calling features that can call nearby businesses to check prices, availability, and inventory.</li>
+      <li><strong>Yelp is building an AI services assistant.</strong> Yelp Assistant uses OpenAI plus Yelp's dataset to diagnose service projects and connect users to pros through Request a Quote.</li>
+      <li><strong>Marketplaces and vertical incumbents already own supply.</strong> Thumbtack, Angi, Taskrabbit, OpenTable, Ticketmaster, booking platforms, and vertical SaaS tools own provider relationships, calendars, reviews, and payment/booking flows.</li>
+    </ul>
+
+    <div class="grid">
+      <div class="box">
+        <h4>User Jobs</h4>
+        <ul>
+          <li>Describe the problem and identify the right type of professional.</li>
+          <li>Check availability, price, service area, credentials, insurance, and reviews.</li>
+          <li>Get multiple quotes without making multiple calls.</li>
+          <li>Schedule, reschedule, confirm, and follow up.</li>
+          <li>Plan local experiences and compare event/activity options.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h4>OpenAI Position</h4>
+        <ul>
+          <li><strong>Advantages:</strong> conversational intake, voice/calling, scheduling, memory, document/photo understanding, neutral comparison across providers.</li>
+          <li><strong>Disadvantages:</strong> limited provider supply, review corpus, local inventory, and guarantee infrastructure compared with Google/Yelp/marketplaces.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Product Plan</h3>
+    <p><strong>Wedge:</strong> a local action concierge that converts messy user intent into quotes, availability, and appointments. Start with high-friction, high-value service categories: home repair, auto service, pet care, beauty/wellness, legal intake, and family activities.</p>
+    <ul>
+      <li><strong>Core flows:</strong> problem diagnosis, photo/document intake, provider shortlist, quote request, phone/email outreach, calendar coordination, confirmation, reminder, post-service review and receipt capture.</li>
+      <li><strong>Integrations:</strong> Yelp/Thumbtack/Angi-style marketplaces, Google Business Profile links, provider calendars, phone/calling, maps, payments, service licenses/insurance verification, CRM/booking SaaS for SMBs.</li>
+      <li><strong>Ranking and trust:</strong> rank by fit, availability, verified reviews, credentials, price transparency, distance, response time, and user constraints. Paid lead routing must be clearly disclosed and never mask credentials or review quality.</li>
+      <li><strong>Monetization:</strong> pay-per-qualified-intro, booking fee, SMB subscription for AI receptionist/intake, premium user concierge, no opaque auction as the default.</li>
+      <li><strong>KPIs:</strong> quote completion, booking rate, provider response time, no-show/cancellation rate, lead acceptance, user satisfaction after service, complaint/refund rate, cost per successful booking.</li>
+      <li><strong>12-month roadmap:</strong> Months 0-3: intake and provider comparison. Months 3-6: calling/quote automation and scheduling. Months 6-9: provider-side AI receptionist and CRM integrations. Months 9-12: trust/guarantee layer and vertical-specific playbooks.</li>
+    </ul>
+    <p><strong>Defensibility:</strong> closed-loop service memory: homes, cars, pets, family needs, preferred providers, past quotes, warranties, and service history.</p>
+    <p>Key sources: <a href="https://support.google.com/localservices/answer/6224841?hl=en-IN">Google Local Services Ads overview</a>, <a href="https://support.google.com/localservices/answer/7195435?hl=en">Google Local Services lead billing</a>, <a href="https://support.google.com/localservices/answer/10125017?hl=en">Google Local Services bidding</a>, <a href="https://support.google.com/websearch/answer/16421135?hl=en">Google AI local-business price checking</a>, <a href="https://blog.google/products-and-platforms/products/shopping/how-to-agentic-calling-let-google-call/">Google agentic calling</a>, <a href="https://blog.yelp.com/news/spring-product-release-2024/">Yelp Assistant launch</a>, <a href="https://blog.yelp.com/news/fall-product-release-2025/">Yelp 2025 AI updates</a>, <a href="https://localiq.com/blog/home-services-search-advertising-benchmarks/">LocaliQ home-services search benchmarks</a>.</p>
+  </section>
+
+  <section>
+    <h2>Cross-Vertical Product Architecture</h2>
+    <ol>
+      <li><strong>Decision memory:</strong> user preferences, constraints, prior purchases, household/asset context, risk tolerance, and professional relationships.</li>
+      <li><strong>Source-grounded comparison:</strong> every vertical needs retrieval, citations, freshness, and structured tradeoff tables.</li>
+      <li><strong>Partner and app surface:</strong> Apps SDK/MCP for vertical partners; ACP or equivalent for checkout where it is mature; licensed partner handoff in regulated verticals.</li>
+      <li><strong>Human-in-the-loop execution:</strong> required for payments, contracts, policy binding, financial product selection, housing decisions, and service bookings.</li>
+      <li><strong>Trust and audit layer:</strong> explain ranking, preserve assumptions, log sources, show compensation, and flag where the model is not a licensed professional.</li>
+      <li><strong>Monetization firewall:</strong> do not let paid placement silently influence organic recommendations. This is the core defense against Google/Amazon-style trust erosion.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>OpenAI Model-Advantage Overlay</h2>
+    <p><strong>The prioritization changes once OpenAI's strongest model advantages are weighted directly.</strong> The most distinctive edges are not generic text chat. They are realtime voice that can reason and take action, image generation/editing that is strong at prompt adherence and useful visual communication, and agentic knowledge-work performance that can handle long, tool-heavy workflows. Those strengths matter most when the user has messy visual/audio context, needs live back-and-forth coordination, or needs a finished work product rather than a list of links.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>OpenAI advantage</th>
+          <th>Evidence signal</th>
+          <th>Vertical impact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Realtime voice + tool use</td>
+          <td>OpenAI describes GPT-Realtime-2 as a voice model with GPT-5-class reasoning, live translation, streaming transcription, phone/SIP support, MCP support, and parallel tool calls.</td>
+          <td>Moves Local Services up: quote calls, scheduling, intake, emergency triage, restaurant/activity planning, and multilingual phone coordination become native product flows.</td>
+        </tr>
+        <tr>
+          <td>Image generation and editing</td>
+          <td>OpenAI emphasizes accurate text rendering, multi-turn consistency, in-context image use, and complex instruction following. Arena's image-edit leaderboard places OpenAI models at the top as of the checked page.</td>
+          <td>Creates a useful media-company and fan-creation subwedge, but does not by itself make "media generation" a top search-ad vertical. The main Media opportunity is entertainment/content discovery and promotion.</td>
+        </tr>
+        <tr>
+          <td>Agentic knowledge work</td>
+          <td>OpenAI reports GPT-5.5 state-of-the-art results on several work/agent benchmarks, including GDPval and OSWorld-style computer-use tasks, plus strong finance-workflow results.</td>
+          <td>Supports Financial and Insurance/Real Estate most directly; it also helps media companies with campaign assets, rights/doc workflows, and recap/publisher tooling.</td>
+        </tr>
+        <tr>
+          <td>Multimodal understanding</td>
+          <td>OpenAI's image and voice stack is integrated with chat context, uploaded images, and tool/action workflows rather than isolated media generation.</td>
+          <td>Improves Retail and Local Services: users can show a product, room, broken appliance, quote, invoice, inspection report, or outfit and ask the agent to act.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Implication:</strong> OpenAI should prefer vertical wedges where voice/image/action are core to the workflow. Search-spend size still matters, but after correcting the Media category, the strongest model-edge opportunities are local coordination, visual shopping, and document-heavy financial/life-event workflows. Media/Entertainment is real, but lower priority unless OpenAI pursues a content-discovery or studio-tooling strategy.</p>
+  </section>
+
+  <section>
+    <h2>OpenAI's Unique Advantages By Vertical</h2>
+    <p><strong>The durable advantages are cross-vertical, but their value varies by market.</strong> OpenAI's strongest assets are not a proprietary product catalog, MLS feed, map graph, banking license, claims system, or media-rights library. The advantages are a large conversational surface, frontier multimodal models, realtime voice, image generation/editing, long-context document reasoning, agentic tool use, goal-mode execution, Apps SDK/connector surfaces, ACP/commerce rails, and a relatively neutral user relationship.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Vertical</th>
+          <th>OpenAI's distinctive advantage</th>
+          <th>Main incumbent advantage</th>
+          <th>Where OpenAI can beat incumbents</th>
+          <th>Where OpenAI should not pretend to be advantaged</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Retail / Shopping</strong></td>
+          <td>Neutral cross-merchant reasoning, image-based shopping, review synthesis, household/taste memory, ACP/Instant Checkout, and goal-mode feed/checkout QA.</td>
+          <td>Google has Shopping Graph and intent distribution; Amazon/Walmart have inventory, logistics, reviews, and purchase history; Shopify owns merchant infrastructure.</td>
+          <td>High-consideration shopping where the user wants an unbiased advisor: "show me the best option for my exact constraints," visual matching, bundles, gifts, cart planning, price/return tradeoffs.</td>
+          <td>Owning the canonical product graph, fulfillment, customer service, or marketplace trust at Amazon/Google scale.</td>
+        </tr>
+        <tr>
+          <td><strong>Local Services & Amusements</strong></td>
+          <td>Realtime voice, phone/SIP, tool calling, scheduling, photo diagnosis, quote comparison, and goal-mode workflows that can verify calls, appointments, and provider responses.</td>
+          <td>Google has Maps, Local Services Ads, reviews, business profiles, and user location; Yelp/Thumbtack/Angi/OpenTable/Ticketmaster have provider or venue supply.</td>
+          <td>Turning messy "I need this handled" intent into action: call three providers, get quotes, compare availability, book, reschedule, remind, and follow up.</td>
+          <td>Local business graph completeness, review authenticity at Google/Yelp scale, and guarantee/insurance infrastructure.</td>
+        </tr>
+        <tr>
+          <td><strong>Financial Services</strong></td>
+          <td>Document parsing, scenario modeling, spreadsheet reasoning, long-context synthesis, advisor-prep workflows, and enterprise copilot credibility from financial-services deployments.</td>
+          <td>Banks, brokerages, credit-card issuers, lenders, and fintech marketplaces own accounts, transaction data, regulated licenses, product economics, and compliance teams.</td>
+          <td>Consumer and advisor decision support: explain disclosures, compare fee structures, model debt payoff/refi/cash-flow scenarios, prepare questions, and route to licensed partners.</td>
+          <td>Personalized regulated advice, fiduciary responsibility, underwriting, suitability decisions, or product ranking driven by hidden compensation.</td>
+        </tr>
+        <tr>
+          <td><strong>Insurance & Real Estate</strong></td>
+          <td>Policy/disclosure parsing, inspection-photo reasoning, affordability/risk tradeoff modeling, life-event memory, and cross-domain planning across home, loan, insurance, move, and repairs.</td>
+          <td>Zillow/Redfin/Realtor.com control listings and consumer home-search behavior; MLSs, brokers, carriers, lenders, and agents control supply, licensing, underwriting, and transactions.</td>
+          <td>Life-event concierge before and around the regulated transaction: explain policies, compare quotes, summarize disclosures, identify questions for agents/lenders, and coordinate checklists.</td>
+          <td>MLS completeness, insurance underwriting, licensed brokerage/agent judgment, fair-housing-safe steering, and binding policy or loan decisions.</td>
+        </tr>
+        <tr>
+          <td><strong>Media & Advertising / Entertainment</strong></td>
+          <td>Conversational taste capture, family/context memory, spoiler-safe summaries, voice-first lean-back discovery, image generation for key art/fan assets, and connector agents for availability/ticketing.</td>
+          <td>Netflix/Disney/Amazon/Apple/YouTube/TikTok/Spotify/Roku/publishers own rights, catalogs, watch history, creator graphs, recommendation data, and distribution.</td>
+          <td>Cross-service discovery and planning: "what should we watch tonight," subscription optimization, recaps before season premieres, showtimes/tickets, family suitability, and publisher/studio promotional assets.</td>
+          <td>Owning viewing history, media rights, creator/subscriber relationships, or platform-native recommendation loops.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Strategic read:</strong> OpenAI's biggest relative advantage is highest where the incumbent data moat is fragmented and the task is multi-step, conversational, verifiable, and action-oriented. That points to Local Services and Retail as the strongest consumer wedges, Financial as a high-value but controlled workflow wedge, Insurance/Real Estate as a life-event assistant rather than a transaction owner, and Media/Entertainment as a useful but less urgent discovery/promotion wedge.</p>
+  </section>
+
+  <section>
+    <h2>Prioritization Table: Market, Advantage, Competition, And Build Cost</h2>
+    <p><strong>Scoring lens:</strong> each factor has a High / Medium / Low label plus the underlying rationale. For market pull, OpenAI advantage, consumer AI-native pull, and goal-mode leverage, High is attractive. Consumer AI-native pull means evidence of frequency, personal context, shareable output, emotional utility, or delegated end-to-end jobs. For incumbent moat, build cost, and regulatory/trust drag, High is a burden. "Goal-mode leverage" means how much long-running, verifiable agent loops can lower build cost by building connectors, testing flows, calling tools, verifying outputs, producing assets, and handling repetitive integration work.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Vertical</th>
+          <th>OpenAI unique advantage</th>
+          <th>Market pull</th>
+          <th>Consumer AI-native pull</th>
+          <th>Incumbent moat</th>
+          <th>Build cost</th>
+          <th>Goal-mode leverage</th>
+          <th>Regulatory / trust drag</th>
+          <th>Priority call</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Retail / Shopping</strong></td>
+          <td><span class="rating very-high">Very high</span><span class="cell-note">Neutral cross-merchant reasoning, visual shopping, review synthesis, household/taste memory, ACP/Instant Checkout, and feed/checkout QA.</span></td>
+          <td><span class="rating very-high">Very high</span><span class="cell-note">Largest Internet Search spend proxy and direct transaction/referral economics.</span></td>
+          <td><span class="rating high">High</span><span class="cell-note">Strong when framed as visual search, gift/outfit/room planning, deal monitoring, marketplace listing, and reorder automation; weaker as a daily generic shopping chatbot.</span></td>
+          <td><span class="rating high">High</span><span class="cell-note">Google, Amazon, Walmart, Shopify, and Perplexity are all structurally committed.</span></td>
+          <td><span class="rating medium">Medium</span><span class="cell-note">Catalog freshness and merchant coverage are hard, but partner feeds and checkout rails reduce the burden.</span></td>
+          <td><span class="rating high">High</span><span class="cell-note">Agents can build merchant connectors, validate feeds, test checkout paths, monitor prices, and QA recommendations.</span></td>
+          <td><span class="rating low">Low-medium</span><span class="cell-note">Trust matters, but regulation is manageable compared with finance, housing, and insurance.</span></td>
+          <td><strong>#1: go first.</strong> Biggest market plus strong OpenAI fit.</td>
+        </tr>
+        <tr>
+          <td><strong>Local Services & Amusements</strong></td>
+          <td><span class="rating very-high">Very high</span><span class="cell-note">Realtime voice, phone/SIP, scheduling, photo diagnosis, quote comparison, and verifiable action loops map directly to user pain.</span></td>
+          <td><span class="rating high">High</span><span class="cell-note">High-value "near me" intent; smaller than retail but more action-oriented.</span></td>
+          <td><span class="rating high">High</span><span class="cell-note">The consumer job is visceral and delegated: "call them, compare quotes, book it, remind me." Voice agents and service-company startups are already clustering here.</span></td>
+          <td><span class="rating high">High</span><span class="cell-note">Google Maps/Local Services, Yelp, Thumbtack, Angi, OpenTable, and Ticketmaster have supply and review assets.</span></td>
+          <td><span class="rating medium">Medium</span><span class="cell-note">No universal structured catalog, but OpenAI can start with calls, messages, scheduling, and marketplace integrations.</span></td>
+          <td><span class="rating very-high">Very high</span><span class="cell-note">Goal mode can build/test provider connectors, call scripts, scheduling flows, quote comparison, CRM integrations, and verification loops.</span></td>
+          <td><span class="rating medium">Medium</span><span class="cell-note">Provider quality, scams, licensing, and service failure risk require guardrails, but the burden is lower than finance/housing.</span></td>
+          <td><strong>#2: go early.</strong> Best pure agent wedge.</td>
+        </tr>
+        <tr>
+          <td><strong>Financial Services</strong></td>
+          <td><span class="rating high">High</span><span class="cell-note">Document parsing, scenario modeling, spreadsheets, long-context reasoning, advisor-prep workflows, and enterprise copilot credibility.</span></td>
+          <td><span class="rating high">High</span><span class="cell-note">High-LTV products, large search spend, and strong willingness to pay from both consumers and enterprises.</span></td>
+          <td><span class="rating medium">Medium</span><span class="cell-note">Prosumer and enterprise finance AI are getting traction; broad consumer finance is lower-frequency and trust-constrained unless tied to a concrete life event.</span></td>
+          <td><span class="rating high">High</span><span class="cell-note">Banks, brokerages, lenders, credit-card issuers, and fintech marketplaces own accounts, data, licenses, and product economics.</span></td>
+          <td><span class="rating high">High</span><span class="cell-note">Secure data access, compliance, audit trails, licensed review, and partner integration are expensive.</span></td>
+          <td><span class="rating medium">Medium</span><span class="cell-note">Goal mode helps with connectors, calculators, audit exports, and document pipelines, but cannot remove licensing/compliance needs.</span></td>
+          <td><span class="rating very-high">Very high</span><span class="cell-note">Advice, fiduciary, lending, suitability, and consumer-protection risk are binding constraints.</span></td>
+          <td><strong>#3: controlled pilot.</strong> High value, but bounded to decision support and handoff.</td>
+        </tr>
+        <tr>
+          <td><strong>Insurance & Real Estate</strong></td>
+          <td><span class="rating high">High</span><span class="cell-note">Policy/disclosure parsing, inspection-photo reasoning, affordability/risk modeling, and life-event planning are strong OpenAI-native workflows.</span></td>
+          <td><span class="rating high">High</span><span class="cell-note">Very high lead value and large search-spend proxy, though demand is episodic.</span></td>
+          <td><span class="rating low">Low-medium</span><span class="cell-note">Consumer urgency is high during moves, claims, renewals, and purchases, but usage is episodic and trust/regulatory friction is unusually high.</span></td>
+          <td><span class="rating very-high">Very high</span><span class="cell-note">Zillow/Redfin/Realtor.com, MLSs, carriers, brokers, agents, lenders, and marketplaces control supply and workflows.</span></td>
+          <td><span class="rating high">High</span><span class="cell-note">Carrier, MLS, broker, lender, and licensed-agent integrations are expensive; the combined category is really several products.</span></td>
+          <td><span class="rating medium">Medium</span><span class="cell-note">Goal mode can build doc parsers, quote workflows, CRM handoffs, and compliance tests, but cannot solve supply access or licensing.</span></td>
+          <td><span class="rating very-high">Very high</span><span class="cell-note">Fair Housing, insurance regulation, lending, steering, and protected-class risk are heavy.</span></td>
+          <td><strong>#4: pursue around life events.</strong> Do not start by owning the transaction.</td>
+        </tr>
+        <tr>
+          <td><strong>Media & Advertising / Entertainment</strong></td>
+          <td><span class="rating medium">Medium</span><span class="cell-note">Voice and image help with discovery, recaps, key art, fan assets, and promotion, but this is not primarily a media-generation vertical.</span></td>
+          <td><span class="rating medium">Medium</span><span class="cell-note">Large search-spend proxy, but lower direct transaction value than retail, finance, insurance, or urgent local leads.</span></td>
+          <td><span class="rating high">High</span><span class="cell-note">Very high for creation, games, music, companions, and fan assets; only medium for movies/streaming discovery. Treat these as two different product bets.</span></td>
+          <td><span class="rating very-high">Very high</span><span class="cell-note">Google/YouTube, Netflix, Disney, Amazon, Apple, Spotify, TikTok, Roku, IMDb, Rotten Tomatoes, Letterboxd, and publishers own rights, catalogs, histories, and distribution.</span></td>
+          <td><span class="rating medium">Medium</span><span class="cell-note">Consumer discovery is buildable, but catalog rights, streaming availability, and partner coverage are messy.</span></td>
+          <td><span class="rating medium">Medium</span><span class="cell-note">Goal mode can build streaming, ticketing, and news connectors and verify availability, but cannot solve rights or watch-history ownership.</span></td>
+          <td><span class="rating medium">Medium</span><span class="cell-note">Copyright, spoilers, age ratings, paid promotion, and publisher economics require care, but are less restrictive than finance/housing.</span></td>
+          <td><strong>#5: keep selective.</strong> Useful discovery/promotion wedge, weaker strategic control.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Bottom line:</strong> goal-mode lowers build cost most in Local Services because calls, scheduling, quote collection, and provider connectors are verifiable. It helps Retail materially through feed, checkout, and price QA. It helps Media/Entertainment with connector and availability checks, but the category is more about content discovery than media generation. It helps Financial and Insurance/Real Estate at the workflow layer, but regulatory and proprietary-supply constraints remain the binding bottleneck.</p>
+  </section>
+
+  <section>
+    <h2>Consumer AI Reality Check</h2>
+    <p><strong>Critique:</strong> the plan is directionally right for monetization, but too anchored on Google ad spend as the starting point. Consumer AI breakout products are not built like search ad categories. They usually start with a narrow, high-frequency or emotionally intense job, create an output users want to save/share/repeat, then monetize through subscriptions, prosumer tiers, transactions, referrals, or B2B/service expansion. A top Google Search vertical is a good place to look for money, but not always the best place to find the first consumer wedge.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Consumer AI pattern</th>
+          <th>Startup / YC signal</th>
+          <th>What it means for OpenAI</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Creation, play, identity, and companionship drive frequency.</strong> The strongest consumer AI lists are full of assistants, companion apps, image/video/music tools, voice tools, productivity tools, and creative editors, not just high-CPC ad categories.</td>
+          <td>a16z's consumer AI ranking lists recurring leaders across general assistants, companionship, image/video editing, voice generation, productivity, and music. YC consumer examples include Playabl, Mixy, YouArt, Koyal, Remix, Digipals, AirCaps, and other AI-native social/personal-context products.</td>
+          <td>OpenAI should keep a separate consumer creative/entertainment platform strategy. Do not bury it inside "Media & Advertising" if that row really means movies, streaming, tickets, and publishers.</td>
+        </tr>
+        <tr>
+          <td><strong>Voice is a wedge, not the final product.</strong> The durable product is the completed service: booking, intake, coaching, support, quote collection, follow-up, or transaction.</td>
+          <td>a16z argues voice is becoming a primary AI interface and that founders use a narrow call/workflow wedge before expanding. YC examples include Riviera for hotels, Humoniq for travel/transport BPO, and Elyos AI for trades and field services.</td>
+          <td>Local Services should move closer to Retail. OpenAI's voice, phone, tool-use, and verification advantages directly map to "get this handled" consumer jobs.</td>
+        </tr>
+        <tr>
+          <td><strong>Vertical AI startups often monetize through the business side even when the user pain is consumer-facing.</strong> The winning product may be a consumer interface plus merchant/provider infrastructure.</td>
+          <td>Yuma automates commerce support for brands; Wildcard is preparing APIs and agentic-commerce infrastructure; travel/hospitality startups are selling AI employees and contact centers to operators.</td>
+          <td>For Retail, Local, Travel, and Media, OpenAI should pair consumer demand aggregation with provider-side tools, not only a ChatGPT user interface.</td>
+        </tr>
+        <tr>
+          <td><strong>Personal context is becoming a product category.</strong> Startups are building memory layers, AI brains, social operating systems, in-person conversation capture, and dynamic interfaces.</td>
+          <td>YC examples include Nessie for cumulative AI-native thinking, Digipals for AI-native social context, AirCaps for in-person conversation intelligence, and Tsenta for job application automation.</td>
+          <td>OpenAI's cross-session memory and connector surface are strategic, not convenience features. The vertical products should share a consented personal-context layer instead of rebuilding memory per vertical.</td>
+        </tr>
+        <tr>
+          <td><strong>Regulated verticals are attractive, but consumer-first is usually not the cleanest entry.</strong> AI can help with documents and choices, but compliance, licensing, and trust dominate the product surface.</td>
+          <td>YC and RFS signals point toward AI-native service companies, finance/insurance operations, BPO replacement, compliance, and institutional/prosumer finance tools more than mass-market autonomous consumer advice.</td>
+          <td>Financial and Insurance/Real Estate should be partner-led decision-support wedges first, with hard boundaries around advice, underwriting, steering, and paid ranking.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Improved Strategic Interpretation</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Vertical</th>
+          <th>Best first product</th>
+          <th>Consumer-AI critique</th>
+          <th>Improved plan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Retail / Shopping</strong></td>
+          <td>Visual shopping and trusted purchase assistant for high-consideration decisions.</td>
+          <td>Do not start with "ask anything about shopping." That is too broad and easy for Google/Amazon to flank.</td>
+          <td>Start with concrete workflows: gifts, outfits, room/repair parts, baby/kids/family purchases, resale listing, replenishment, and price/return monitoring. Add seller/merchant tooling so OpenAI improves catalog quality and earns distribution from both sides.</td>
+        </tr>
+        <tr>
+          <td><strong>Local Services & Amusements</strong></td>
+          <td>Voice-first local concierge that calls, texts, compares, books, and follows up.</td>
+          <td>The hard part is not recommendation; it is provider response, quote quality, scheduling, and accountability.</td>
+          <td>Make this the strongest agentic wedge: phone/SIP, calendar, maps, photos, payments, provider CRMs, call summaries, cancellation/reschedule loops, and verified outcomes.</td>
+        </tr>
+        <tr>
+          <td><strong>Media & Advertising / Entertainment</strong></td>
+          <td>Two bets: media discovery as a feature; AI-native creation/entertainment as a separate consumer platform bet.</td>
+          <td>Movie/streaming discovery has medium monetization and brutal rights/data moats. AI entertainment creation has much stronger consumer pull but is not the same as the search-spend category.</td>
+          <td>Keep discovery lightweight inside ChatGPT: what-to-watch, recaps, tickets, family suitability. Separately, build creation loops around image/video/voice, characters, fan assets, and social sharing where OpenAI's model advantage is real.</td>
+        </tr>
+        <tr>
+          <td><strong>Financial Services</strong></td>
+          <td>Financial paperwork and scenario copilot with licensed partner handoff.</td>
+          <td>High CPC does not mean broad consumer AI app frequency. Most consumers do not want daily finance advice from a chatbot.</td>
+          <td>Attach to life events: refinancing, debt payoff, home purchase, taxes, benefits, college, retirement checkups. Build calculators, disclosure explainers, statement ingestion, advisor-prep packets, and auditable handoffs.</td>
+        </tr>
+        <tr>
+          <td><strong>Insurance & Real Estate</strong></td>
+          <td>Life-event assistant for moving, claims, policy renewal, home purchase, and repair coordination.</td>
+          <td>This is too episodic and regulated to be a standalone consumer habit. The transaction surface is controlled by licensed incumbents and supply owners.</td>
+          <td>Treat it as an attach layer to Retail, Local, and Finance. Parse policies, compare quotes, summarize disclosures, explain inspection reports, coordinate repairs, and route to licensed partners.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Revised priority read:</strong> keep Retail first and Local Services second. Add a cross-cutting <strong>Consumer Creative/Entertainment</strong> initiative that is not scored as a Google ad vertical but should receive real product investment because voice/image/social sharing are where consumer AI is already proving frequency. Keep Financial and Insurance/Real Estate as high-value, partner-led workflows rather than broad autonomous consumer apps.</p>
+  </section>
+
+  <section>
+    <h2>Recommended Sequencing With Consumer AI Lens</h2>
+    <ol>
+      <li><strong>Retail first:</strong> still the best initial wedge because it combines the largest search-spend pool, commerce rails, consumer-visible image use cases, and near-term transaction economics. Start with narrow high-intent workflows, not a generic shopping chatbot.</li>
+      <li><strong>Local services second:</strong> move this closer to Retail because voice and goal-mode execution create a real structural advantage. The product should center on spoken intake, agentic calling, quote comparison, calendar coordination, photo-based diagnosis, multilingual provider conversations, and verified follow-through.</li>
+      <li><strong>Consumer creative/entertainment as a parallel platform bet:</strong> treat this separately from the Media & Advertising search-spend vertical. Consumer AI traction is strong in creation, remixing, games, characters, music, and social sharing; OpenAI's image/voice advantages are most valuable here.</li>
+      <li><strong>Financial third among the ad-spend verticals, but partner-led:</strong> OpenAI's knowledge-work and document reasoning are strong fits for scenario planning, fee comparison, statements, debt payoff, mortgage/refi analysis, tax prep, and advisor handoff. The product must avoid unlicensed personalized advice.</li>
+      <li><strong>Insurance & Real Estate fourth:</strong> attractive because of search-spend and lead value, but too episodic and regulated for a broad consumer habit. The first wedge should be document parsing and life-event planning, not autonomous recommendations.</li>
+      <li><strong>Media discovery fifth within the corrected ad vertical:</strong> keep movies, streaming, tickets, recaps, subscriptions, and publisher/studio promotion as a useful feature set, but do not confuse it with the higher-potential AI-native creative/entertainment platform opportunity.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Caveats And Assumptions</h2>
+    <ul>
+      <li><strong>Google-only vertical spend is not public.</strong> The ranking uses OAAA/MediaRadar-Vivvix Internet Search spend as a Google-heavy proxy, not a direct Google disclosure.</li>
+      <li><strong>External AI research was used as a directional input only.</strong> Gemini and Claude helped broaden the landscape scan. Claims in this report are grounded in source links listed here, not in the AI outputs themselves.</li>
+      <li><strong>Regulated verticals need counsel and licensed partner review.</strong> The product plans are strategic concepts, not legal, financial, insurance, or real-estate advice.</li>
+      <li><strong>AI commerce adoption data is noisy.</strong> Company-reported conversion lifts, query counts, and adoption stats should be treated as directional unless independently audited.</li>
+      <li><strong>Some categories are broad by construction.</strong> "Insurance & Real Estate" and "Local Services & Amusements" combine multiple submarkets with different economics; productization should split them in pilots.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Further Questions</h2>
+    <ol>
+      <li>Should OpenAI optimize these products for consumer subscription retention, transaction/referral revenue, enterprise SaaS, or long-term distribution leverage?</li>
+      <li>Which vertical partners are strategically acceptable if neutrality is the moat?</li>
+      <li>Where should OpenAI enforce a hard "no sponsored ranking" policy versus permitting labeled sponsored alternatives?</li>
+      <li>Can OpenAI maintain enough source freshness in retail, insurance, finance, and local services without owning vertical supply?</li>
+      <li>Which regulated workflows should be blocked, routed to licensed partners, or supported only as educational/document-summary workflows?</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Source Appendix</h2>
+    <h3>Market And Search-Spend Sources</h3>
+    <ul class="source-list">
+      <li><a href="https://oaaa.org/wp-content/uploads/2025/04/2024-Total-Media-Spend-by-Product-Industry-by-Channel.pdf">OAAA / MediaRadar-Vivvix: 2024 Product Industries Media Spend by Channel</a></li>
+      <li><a href="https://www.iab.com/insights/internet-advertising-revenue-report-full-year-2025/">IAB/PwC: Internet Advertising Revenue Report, Full Year 2025</a></li>
+      <li><a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm">Alphabet Inc. 2025 Form 10-K</a></li>
+      <li><a href="https://www.wordstream.com/blog/2026-google-ads-benchmarks">WordStream/LocaliQ: 2026 Google Ads Benchmarks</a></li>
+      <li><a href="https://www.wordstream.com/blog/2025-google-ads-benchmarks">WordStream/LocaliQ: 2025 Google Ads Benchmarks</a></li>
+    </ul>
+
+    <h3>OpenAI And Cross-Platform AI Sources</h3>
+    <ul class="source-list">
+      <li><a href="https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/">OpenAI: advancing voice intelligence with realtime models</a></li>
+      <li><a href="https://openai.com/index/introducing-4o-image-generation/">OpenAI: 4o image generation</a></li>
+      <li><a href="https://openai.com/index/introducing-gpt-5-5/">OpenAI: GPT-5.5 agentic knowledge-work benchmarks</a></li>
+      <li><a href="https://lmarena.ai/leaderboard/">LMArena/Arena leaderboard: image generation and image editing rankings</a></li>
+      <li><a href="https://openai.com/index/chatgpt-shopping-research/">OpenAI: ChatGPT Shopping Research</a></li>
+      <li><a href="https://openai.com/index/buy-it-in-chatgpt/">OpenAI: Instant Checkout and Agentic Commerce Protocol</a></li>
+      <li><a href="https://openai.com/index/introducing-apps-in-chatgpt/">OpenAI: Apps in ChatGPT and Apps SDK</a></li>
+      <li><a href="https://openai.com/index/morgan-stanley/">OpenAI: Morgan Stanley financial-advisor AI</a></li>
+      <li><a href="https://openai.com/index/klarna/">OpenAI: Klarna AI assistant</a></li>
+      <li><a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool">Anthropic: Claude Computer Use</a></li>
+      <li><a href="https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome">Anthropic: Claude in Chrome</a></li>
+      <li><a href="https://www.anthropic.com/news/model-context-protocol">Anthropic: Model Context Protocol</a></li>
+      <li><a href="https://www.perplexity.ai/es-es/hub/blog/shop-like-a-pro">Perplexity: Shopping assistant</a></li>
+      <li><a href="https://www.perplexity.ai/es/hub/blog/why-we-re-experimenting-with-advertising">Perplexity: advertising experiment</a></li>
+    </ul>
+
+    <h3>Consumer AI And YC Startup Signals</h3>
+    <ul class="source-list">
+      <li><a href="https://a16z.com/100-gen-ai-apps-5/">a16z: Top 100 Gen AI Consumer Apps, 5th Edition</a></li>
+      <li><a href="https://a16z.com/podcast/the-state-of-consumer-tech-in-the-age-of-ai/">a16z: The State of Consumer Tech in the Age of AI</a></li>
+      <li><a href="https://a16z.com/ai-voice-agents-2025-update/">a16z: AI Voice Agents 2025 Update</a></li>
+      <li><a href="https://www.ycombinator.com/rfs">Y Combinator: Requests for Startups</a></li>
+      <li><a href="https://www.ycombinator.com/companies/industry/Consumer">Y Combinator: Consumer startups directory</a></li>
+      <li><a href="https://www.ycombinator.com/companies/industry/travel">Y Combinator: Travel startups directory</a></li>
+      <li><a href="https://www.ycombinator.com/companies/industry/Finance">Y Combinator: Finance startups directory</a></li>
+      <li><a href="https://www.ycombinator.com/companies/yuma-ai">Y Combinator: Yuma AI</a></li>
+      <li><a href="https://www.ycombinator.com/companies/wildcard">Y Combinator: Wildcard</a></li>
+      <li><a href="https://www.ycombinator.com/companies/elyos-ai">Y Combinator: Elyos AI</a></li>
+    </ul>
+
+    <h3>Retail Sources</h3>
+    <ul class="source-list">
+      <li><a href="https://blog.google/products-and-platforms/products/shopping/agentic-checkout-holiday-ai-shopping/">Google: agentic checkout for shopping</a></li>
+      <li><a href="https://blog.google/products/ads-commerce/agentic-commerce-ai-tools-protocol-retailers-platforms/">Google: UCP and AI tools for commerce</a></li>
+      <li><a href="https://blog.google/products-and-platforms/products/shopping/shopping-updates-google-marketing-live/">Google: Universal Cart and shopping updates</a></li>
+      <li><a href="https://www.aboutamazon.com/news/retail/amazon-rufus-ai-assistant-personalized-shopping-features">Amazon: Rufus/Alexa shopping assistant</a></li>
+      <li><a href="https://corporate.walmart.com/news/2025/10/14/walmart-partners-with-openai-to-create-ai-first-shopping-experiences">Walmart: OpenAI partnership</a></li>
+      <li><a href="https://www.geekwire.com/2026/judge-blocks-perplexitys-ai-bot-from-shopping-on-amazon-in-early-test-of-agentic-commerce/">GeekWire: Amazon/Perplexity agentic commerce injunction</a></li>
+      <li><a href="https://www.gartner.com/en/newsroom/press-releases/2026-05-27-gartner-survey-finds-consumers-want-ai-shopping-help-but-not-ai-purchase-decisions">Gartner: consumers want AI shopping help, not autonomous purchase decisions</a></li>
+      <li><a href="https://nielseniq.com/global/en/news-center/2026/42-of-consumers-now-use-ai-tools-to-shop-niq-data-shows/">NIQ: AI shopping behavior survey</a></li>
+    </ul>
+
+    <h3>Insurance And Real Estate Sources</h3>
+    <ul class="source-list">
+      <li><a href="https://www.zillowgroup.com/news/zillow-becomes-first-real-estate-app-in-chatgpt/">Zillow: real-estate app in ChatGPT</a></li>
+      <li><a href="https://zillow.mediaroom.com/2023-05-02-Zillow-builds-ChatGPT-plugin-for-real-estate-searches">Zillow: ChatGPT plugin for real-estate search</a></li>
+      <li><a href="https://investors.zillowgroup.com/investors/news-and-events/news/news-details/2026/Zillows-Structural-AI-Advantage---Our-Thoughts-2026-V-Blqi8WAt/default.aspx">Zillow: structural AI advantage note</a></li>
+      <li><a href="https://www.redfin.com/news/ask-redfin-launches-nationwide/">Redfin: Ask Redfin nationwide launch</a></li>
+      <li><a href="https://www.prnewswire.com/news-releases/search-it-how-you-say-it-realtorcom-launches-new-ai-powered-search-302578902.html">Realtor.com: AI-powered home search</a></li>
+      <li><a href="https://insurify.com/press/news/insurify-chatgpt-app/">Insurify: ChatGPT app for car-insurance comparison</a></li>
+      <li><a href="https://www.lemonade.com/claims">Lemonade: AI-assisted claims</a></li>
+      <li><a href="https://content.naic.org/sites/default/files/2023-12-4%252520Model%252520Bulletin_Adopted_0.pdf">NAIC: AI Model Bulletin for insurers</a></li>
+      <li><a href="https://archives.hud.gov/news/2024/pr24-098.cfm">HUD: Fair Housing Act guidance on AI</a></li>
+      <li><a href="https://www.consumerfinance.gov/about-us/newsroom/cfpb-issues-guidance-on-credit-denials-by-lenders-using-artificial-intelligence/">CFPB: AI credit-denial/adverse action guidance</a></li>
+    </ul>
+
+    <h3>Media, Advertising, And Entertainment Sources</h3>
+    <ul class="source-list">
+      <li><a href="https://advertisers.mediaradar.com/top_media_and_entertainment_advertisers">MediaRadar: Top Media & Entertainment Advertisers</a></li>
+      <li><a href="https://intercom.help/vivvix-360/en/articles/8148702-product-category-structure">MediaRadar 360 / Vivvix product category structure</a></li>
+      <li><a href="https://openai.com/index/introducing-4o-image-generation/">OpenAI: 4o image generation</a></li>
+      <li><a href="https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/">OpenAI: realtime voice models</a></li>
+      <li><a href="https://www.perplexity.ai/es/hub/blog/why-we-re-experimenting-with-advertising">Perplexity: advertising and publisher experiment</a></li>
+      <li><a href="https://www.ftc.gov/industry/technology/artificial-intelligence">FTC: Artificial Intelligence enforcement and guidance</a></li>
+    </ul>
+
+    <h3>Financial Services Sources</h3>
+    <ul class="source-list">
+      <li><a href="https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/a-decade-of-ai-innovation--bofa-s-virtual-assistant-erica-surpas.html">Bank of America: Erica surpasses 3B interactions</a></li>
+      <li><a href="https://cloud.google.com/solutions/financial-services">Google Cloud: financial services AI</a></li>
+      <li><a href="https://cloud.google.com/transform/new-research-shows-how-ai-agents-are-driving-value-for-financial-services">Google Cloud: AI agents in financial services</a></li>
+      <li><a href="https://www.consumerfinance.gov/data-research/research-reports/chatbots-in-consumer-finance/">CFPB: chatbots in consumer finance</a></li>
+      <li><a href="https://www.finra.org/rules-guidance/notices/24-09">FINRA Regulatory Notice 24-09 on generative AI</a></li>
+      <li><a href="https://www.sec.gov/newsroom/speeches-statements/sec-chair-gary-gensler-ai-washing">SEC: AI washing</a></li>
+      <li><a href="https://www.sec.gov/newsroom/press-releases/2024-186">SEC FY2024 enforcement results including AI-washing actions</a></li>
+    </ul>
+
+    <h3>Local Services Sources</h3>
+    <ul class="source-list">
+      <li><a href="https://support.google.com/localservices/answer/6224841?hl=en-IN">Google Local Services Ads overview</a></li>
+      <li><a href="https://support.google.com/localservices/answer/7195435?hl=en">Google Local Services: how leads work</a></li>
+      <li><a href="https://support.google.com/localservices/answer/10125017?hl=en">Google Local Services: bidding</a></li>
+      <li><a href="https://support.google.com/websearch/answer/16421135?hl=en">Google Search Help: AI checks pricing for local businesses</a></li>
+      <li><a href="https://support.google.com/googleshopping/answer/16742225?hl=en">Google Shopping Help: AI calls nearby stores</a></li>
+      <li><a href="https://blog.google/products-and-platforms/products/shopping/how-to-agentic-calling-let-google-call/">Google: agentic calling</a></li>
+      <li><a href="https://blog.yelp.com/news/spring-product-release-2024/">Yelp: AI Assistant launch</a></li>
+      <li><a href="https://blog.yelp.com/news/fall-product-release-2025/">Yelp: 2025 AI updates</a></li>
+      <li><a href="https://localiq.com/blog/home-services-search-advertising-benchmarks/">LocaliQ: home-services search advertising benchmarks</a></li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>
