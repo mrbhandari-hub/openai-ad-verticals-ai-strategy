@@ -177,13 +177,48 @@
       <li><strong>The funnel-adjusted priority order is deliberate, not a TAM sort.</strong> Combining search-spend economics, OpenAI's structural advantages, and native demand, the order is Retail, Health, Education, Food/Nutrition, Local Services, Travel, Home, Careers, Financial, Insurance/Real Estate, Legal/Tax/Government, Auto, and Media/Entertainment.</li>
       <li><strong>OpenAI's defensible wedge is a trusted decision layer, not a copy of Google's auction.</strong> Google owns query distribution and shopping/local tooling, while Amazon, Zillow, banks, insurers, and Yelp own the vertical data. OpenAI wins where reasoning, memory, multimodal input, partner apps, and human-in-the-loop execution make complex, high-anxiety decisions feel safer and easier.</li>
       <li><strong>The highest-risk verticals require a hard wall between advice, ranking, and monetization.</strong> Insurance, real estate, financial services, housing, and local services carry licensing, discrimination, consumer-protection, and lead-quality constraints that favor licensed partner handoffs over autonomous advice. Transaction, referral, SaaS, and partner revenue are safer than unlabeled answer ads, and any hidden paid ranking would corrode the trust moat that makes the whole strategy work.</li>
-      <li><strong>The ranking rests on a proxy, and the inputs deserve that caveat.</strong> Internet Search spend from OAAA/MediaRadar-Vivvix is a Google-heavy approximation rather than a Google-only disclosure, and the adoption and conversion figures cited throughout should be read as directional. The strategic conclusions hold, but the precision of the underlying numbers should not be overstated.</li>
+      <li><strong>The ranking rests on a proxy and a non-mutually-exclusive source taxonomy.</strong> Internet Search spend from OAAA/MediaRadar-Vivvix is a Google-heavy approximation rather than a Google-only disclosure, and its product-industry rows are raw source rows, not clean strategic verticals. Retail subcategories such as apparel, footwear, beauty, household furnishings, and department stores should be read as evidence inside the Retail / Shopping family, not as additive peer opportunities.</li>
     </ul>
   </section>
 
   <section>
     <h2>Top 50 Internet Search-Spend Rows</h2>
-    <p><strong>Basis:</strong> The OAAA/MediaRadar-Vivvix PDF ranks rows by total category ad spend. For this strategy question, the table below re-sorts the same source rows by the <em>Internet Search Spend</em> column, which is the closest public proxy for Google Search advertising concentration. It is not a Google-only disclosure, and it does not reveal individual advertiser spend. The first five remain the deep-dive strategy scope; the full top 50 shows adjacent verticals, retail subcategories, and fragmented health/pharma/wellness rows that should influence product sequencing.</p>
+    <p><strong>Basis:</strong> The OAAA/MediaRadar-Vivvix PDF ranks rows by total category ad spend. For this strategy question, the table below re-sorts the same source rows by the <em>Internet Search Spend</em> column, which is the closest public proxy for Google Search advertising concentration. It is not a Google-only disclosure, and it does not reveal individual advertiser spend. These are raw product-industry rows, not a deduped opportunity taxonomy.</p>
+    <div class="callout">
+      <strong>Deduplication rule:</strong> use the top-50 table as evidence, not as the final vertical list. Rows such as Apparel, Footwear, Beauty, Department Stores, Household Furnishings, Building Materials, Appliances, Sporting Goods, and Jewelry should be grouped under a single <strong>Retail / Shopping family</strong> unless the product plan needs a specific wedge. Do not add those rows to the broad Retail row to estimate market size; treat them as subcategory signals that explain where the retail product should start.
+    </div>
+    <h3>Strategic Rollup From Raw Source Rows</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Strategic vertical family</th>
+          <th>How raw source rows map into it</th>
+          <th>How to use it in the strategy</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Retail / Shopping</strong></td>
+          <td>Retail plus retail-like subrows including Discount Department &amp; Variety Stores, Department Stores, Apparel, Footwear, Beauty, Jewelry, Sporting Goods, Household Furnishings, Building Materials, Appliances, and similar product categories.</td>
+          <td>One parent priority. Subrows identify wedge categories for ChatGPT shopping flows; they are not separate peer verticals and should not be summed with Retail without a true deduped media plan.</td>
+        </tr>
+        <tr>
+          <td><strong>Health / Wellness / Care Navigation</strong></td>
+          <td>Fragmented rows including Medicines &amp; Proprietary Remedies, Eye Glasses / Medical Equipment, Personal Hygiene &amp; Health, Fitness &amp; Diet Programs &amp; Spas, Pharmaceutical Houses, and related toiletries/fitness rows.</td>
+          <td>One strategic health family, with strong ChatGPT-native demand. Use source rows to show fragmentation and spend breadth, not to imply a single clean ad category.</td>
+        </tr>
+        <tr>
+          <td><strong>Food / Nutrition / Restaurants</strong></td>
+          <td>Restaurants, Prepared Foods, Dairy/Produce/Meat/Bakery, grocery-adjacent retail rows, diet/fitness rows, and Instacart/meal-planning fulfillment context.</td>
+          <td>One consumer wedge that bridges shopping, health, and local demand. Keep restaurant booking, grocery carting, and nutrition support distinct inside the product plan.</td>
+        </tr>
+        <tr>
+          <td><strong>Travel, Education, Auto, Financial, Legal/Government, Careers, Media</strong></td>
+          <td>Mostly cleaner stand-alone rows or opportunity areas, though some still span several product industries or are not perfectly represented in the search-spend source.</td>
+          <td>Rank as strategic families using search-spend evidence plus ChatGPT funnel, OpenAI advantage, incumbent moat, build cost, and trust/regulatory drag.</td>
+        </tr>
+      </tbody>
+    </table>
     <table>
       <thead>
         <tr>
@@ -1037,7 +1072,7 @@
 
   <section>
     <h2>Unified Prioritization Across First And Second Wave</h2>
-    <p><strong>Scoring lens:</strong> this table merges the original five high-search-spend verticals with the eight added opportunity areas. The rank is not just TAM. It now explicitly weights <strong>existing ChatGPT funnel</strong>: whether users are already bringing this intent to ChatGPT before OpenAI builds a verticalized product. For market pull, existing ChatGPT funnel, OpenAI advantage, consumer AI-native pull, and goal-mode leverage, High is attractive. For incumbent moat, build cost, and regulatory/trust drag, High is a burden. Public funnel evidence is partial, but enough to matter: OpenAI's usage paper identifies tutoring/teaching, purchasable products, cooking/recipes, health/self-care, images, and practical guidance as usage categories; OpenAI has said hundreds of millions use ChatGPT to compare products; and public ChatGPT Health reporting indicates health is already a very large share of ChatGPT use.</p>
+    <p><strong>Scoring lens:</strong> this table dedupes the raw search-spend rows into strategic vertical families, then merges the original five high-search-spend families with the eight added opportunity areas. The rank is not just TAM. It now explicitly weights <strong>existing ChatGPT funnel</strong>: whether users are already bringing this intent to ChatGPT before OpenAI builds a verticalized product. For market pull, existing ChatGPT funnel, OpenAI advantage, consumer AI-native pull, and goal-mode leverage, High is attractive. For incumbent moat, build cost, and regulatory/trust drag, High is a burden. Public funnel evidence is partial, but enough to matter: OpenAI's usage paper identifies tutoring/teaching, purchasable products, cooking/recipes, health/self-care, images, and practical guidance as usage categories; OpenAI has said hundreds of millions use ChatGPT to compare products; and public ChatGPT Health reporting indicates health is already a very large share of ChatGPT use.</p>
     <table>
       <thead>
         <tr>
